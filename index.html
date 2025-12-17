@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S E E N – Eau de Parfum</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- PayPal SDK - only once -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAym35qgEbxv2hSlqNUaP0IzxS2jx0jL-COBfpqCGbFyWteZkRHUp23KQ1S4yxINLbNtLTkhGWYrBrO_o&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" style="text-align:center; padding:50px 20px; background-color:#000; color:#fff;">
+    <h1 style="font-size:3rem; letter-spacing:0.5rem;">S E E N</h1>
+    <p class="tagline" style="font-size:1.5rem; margin-top:10px;">Presence before words.</p>
+    <span class="status" style="display:block; margin-top:20px; font-weight:500; font-size:1.2rem;">Available now</span>
+    <div style="margin-top:40px;">
+      <img src="https://i.postimg.cc/50km0nmv/9B3F511E_15D9_49A0_AC45_7D88F83014EA.png" 
+           alt="S E E N Hero" 
+           style="width:100%; max-width:500px; border-radius:12px;">
+    </div>
+  </section>
+
+  <!-- About S E E N -->
+  <section class="section" style="padding:50px 20px; max-width:900px; margin:0 auto;">
+    <h2 style="font-size:2rem; letter-spacing:2px; margin-bottom:20px;">About S E E N</h2>
+    <p style="font-size:1.1rem; line-height:1.6;">
+      S E E N was born from a pursuit of clarity and restraint, a desire to craft a fragrance that reflects presence without performance. Every element was considered with care — the balance of notes, the weight of each accord, the harmony of the whole — forming a scent that exists quietly yet unmistakably.
+    </p>
+    <p style="font-size:1.1rem; line-height:1.6; margin-top:15px;">
+      The fragrance reveals itself in layers. Subtle warmth and depth emerge over time, unfolding with a deliberate rhythm that rewards attention. It lingers softly, intimate yet persistent, composed without excess.
+    </p>
+    <p style="font-size:1.1rem; line-height:1.6; margin-top:15px;">
+      Created with the finest ingredients, each element is chosen for purity and its ability to interact harmoniously with the skin. S E E N is a study in restraint and refinement — simultaneously personal and enduring, a quiet signature, carefully measured and artfully realized.
+    </p>
+  </section>
+
+  <!-- Perfume Scent Description -->
+  <section class="section dark" style="padding:50px 20px; background-color:#f5f5f5;">
+    <h2 style="font-size:2rem; letter-spacing:2px; margin-bottom:20px;">The Scent</h2>
+    <p style="font-size:1.1rem; line-height:1.6;">
+      S E E N is a study in subtlety. Its layers reveal depth and clarity in equal measure, a fragrance that marks its presence gracefully, leaving a quiet, lasting trace.
+    </p>
+  </section>
+
+  <!-- Bottle Description -->
+  <section class="section" style="padding:50px 20px; max-width:900px; margin:0 auto;">
+    <h2 style="font-size:2rem; letter-spacing:2px; margin-bottom:20px;">The Bottle</h2>
+    <p style="font-size:1.1rem; line-height:1.6;">
+      A silhouette of restraint. Weighted, precise, intentional.
+    </p>
+  </section>
+
+  <!-- Perfume Products -->
+  <section class="section dark" style="padding:50px 20px; background-color:#f8f8f8;">
+    <h2 style="text-align:center; font-size:2rem; letter-spacing:2px; margin-bottom:40px;">Available Now</h2>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:50px;">
+
+      <!-- Light Perfume -->
+      <div style="max-width:300px; text-align:center;">
+        <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" 
+             alt="S E E N Light Bottle" 
+             style="width:100%; border-radius:12px; margin-bottom:15px;">
+        <p style="font-size:1.1rem; margin-bottom:5px;">50 ml – 40€</p>
+        <div id="paypal-container-FERZ227356RFA"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "FERZ227356RFA",
+          }).render("#paypal-container-FERZ227356RFA");
+        </script>
+      </div>
+
+      <!-- Dark Perfume -->
+      <div style="max-width:300px; text-align:center;">
+        <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" 
+             alt="S E E N Dark Bottle" 
+             style="width:100%; border-radius:12px; margin-bottom:15px;">
+        <p style="font-size:1.1rem; margin-bottom:5px;">50 ml – 40€</p>
+        <div id="paypal-container-LWDMWH2D6HDE4"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "LWDMWH2D6HDE4",
+          }).render("#paypal-container-LWDMWH2D6HDE4");
+        </script>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Social Media & Contact -->
+  <section class="section" style="padding:50px 20px; max-width:900px; margin:0 auto; text-align:center;">
+    <p style="font-size:1rem;">
+      Shop & inquiries: <br>
+      <a href="https://www.instagram.com/seenfragrance/" target="_blank" style="color:#000; text-decoration:none; margin-right:15px;">Instagram</a> ·
+      <a href="mailto:oceandeu@gmail.com" style="color:#000; text-decoration:none; margin-right:15px;">Email</a> ·
+      <a href="https://seenfragrance.com" target="_blank" style="color:#000; text-decoration:none;">seenfragrance.com</a>
+    </p>
+  </section>
+
+</body>
+</html>
