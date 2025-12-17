@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S E E N – Eau de Parfum</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin:0;
+      font-family:'Georgia', serif;
+      background-color:#111111;
+      color:#ffffff;
+    }
+    a {
+      color:#ffffff;
+      text-decoration:none;
+    }
+    h1, h2 {
+      margin:0 0 10px 0;
+    }
+    .center {
+      text-align:center;
+    }
+    .section {
+      padding:50px 20px;
+    }
+    .section.light {
+      background-color:#f5f5f5;
+      color:#111111;
+    }
+    .gold-gradient {
+      background: linear-gradient(45deg, #bfa25c, #8c6d2f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .product-container {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:40px;
+      margin-top:40px;
+    }
+    .product-image {
+      max-width:300px;
+      border-radius:8px;
+    }
+    .buy-section {
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      gap:15px;
+      margin-top:15px;
+    }
+    .buy-button {
+      padding:12px 30px;
+      background: linear-gradient(45deg, #bfa25c, #8c6d2f);
+      color:#111111;
+      font-weight:600;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .buy-button:hover {
+      opacity:0.85;
+    }
+    select.quantity {
+      padding:10px;
+      border-radius:5px;
+      border:1px solid #ccc;
+      font-size:1rem;
+      font-weight:500;
+    }
+    .hero-image {
+      width:100%;
+      max-height:600px;
+      object-fit:cover;
+      display:block;
+      margin:0 auto;
+    }
+    .contact-links a {
+      margin:0 10px;
+      font-weight:500;
+    }
+  </style>
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAym35qgEbxv2hSlqNUaP0IzxS2jx0jL-COBfpqCGbFyWteZkRHUp23KQ1S4yxINLbNtLTkhGWYrBrO_o&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+</head>
+<body>
+
+  <!-- Introduction / Presence -->
+  <section class="section center">
+    <h1>S E E N</h1>
+    <p>Presence before words.</p>
+    <span>Available now</span>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="section center">
+    <img src="https://postimg.cc/TLFvxqBZ" alt="S E E N Hero Image" class="hero-image">
+  </section>
+
+  <!-- The Scent Section -->
+  <section class="section light center">
+    <h2>The Scent</h2>
+    <p>
+      S E E N is a study in subtlety. Its layers reveal depth and clarity in equal measure, a fragrance that marks its presence gracefully, leaving a quiet, lasting trace.
+    </p>
+  </section>
+
+  <!-- The Bottle Section -->
+  <section class="section center">
+    <h2 class="gold-gradient">The Bottle</h2>
+    <p>A silhouette of restraint. Weighted, precise, intentional.</p>
+
+    <div class="product-container">
+
+      <!-- Light Perfume -->
+      <div>
+        <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" 
+             alt="S E E N Light Bottle" class="product-image">
+        <div class="buy-section">
+          <label for="quantity-light">Quantity:</label>
+          <select id="quantity-light" class="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <div id="paypal-container-LIGHT"></div>
+          <script>
+            paypal.HostedButtons({
+              hostedButtonId: "LWDMWH2D6HDE4",
+            }).render("#paypal-container-LIGHT");
+          </script>
+        </div>
+      </div>
+
+      <!-- Dark Perfume -->
+      <div>
+        <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" 
+             alt="S E E N Dark Bottle" class="product-image">
+        <div class="buy-section">
+          <label for="quantity-dark">Quantity:</label>
+          <select id="quantity-dark" class="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <div id="paypal-container-DARK"></div>
+          <script>
+            paypal.HostedButtons({
+              hostedButtonId: "FERZ227356RFA",
+            }).render("#paypal-container-DARK");
+          </script>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About S E E N Section -->
+  <section class="section center">
+    <h2>About S E E N</h2>
+    <p>
+      S E E N was born from a pursuit of clarity and restraint, a desire to craft a fragrance that reflects presence without performance. Every element was considered with care: the balance of notes, the weight of each accord, the harmony of the whole forming a scent that exists quietly yet unmistakably.<br><br>
+      The fragrance reveals itself in layers. Subtle warmth and depth emerge over time, unfolding with a deliberate rhythm that rewards attention. It lingers softly, a presence that evolves naturally, intimate yet persistent, composed without excess.<br><br>
+      Created with the finest ingredients, each element is chosen for its purity and ability to interact harmoniously with the skin. S E E N is a study in restraint and refinement, a fragrance that is simultaneously personal and enduring—a quiet signature, carefully measured and artfully realized.
+    </p>
+    <img src="https://i.postimg.cc/50km0nmv/9B3F511E_15D9_49A0_AC45_7D88F83014EA.png" 
+         alt="S E E N Creator" class="product-image" style="margin-top:30px;">
+  </section>
+
+  <!-- Shop / Contact Section -->
+  <section class="section center">
+    <h2 class="gold-gradient">Available Now</h2>
+    <p class="contact-links">
+      Shop & inquiries: 
+      <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> · 
+      <a href="mailto:oceandeu@gmail.com">Email</a> · 
+      <a href="https://seenfragrance.com/" target="_blank">seenfragrance.com</a>
+    </p>
+  </section>
+
+</body>
+</html>
