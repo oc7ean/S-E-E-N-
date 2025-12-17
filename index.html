@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>S E E N — Eau de Parfum</title>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+
+<!-- PAYPAL SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAAym35qgEbxv2hSlqNUaP0IzxS2jx0jL-COBfpqCGbFyWteZkRHUp23KQ1S4yxINLbNtLTkhGWYrBrO_o&components=hosted-buttons&currency=EUR"></script>
+
+<style>
+:root {
+  --ink: #070707;
+  --soft-black: #0e0e0e;
+  --bone: #f1efe9;
+  --antique-gold: #c6b27d;
+  --aged-gold: #8f7a4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #0a0a0a, #050505);
+  color: var(--bone);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  text-align: center;
+  padding: 170px 24px 0;
+}
+
+.hero-section h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  margin-bottom: 18px;
+  color: var(--bone);
+}
+
+.hero-section p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.status {
+  margin-top: 16px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  opacity: 0.45;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 860px;
+  margin: 110px auto 0;
+  display: block;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 150px 24px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-bottom: 26px;
+}
+
+.section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 2;
+  opacity: 0.75;
+}
+
+/* ===== GOLD TEXT ===== */
+.gold {
+  background: linear-gradient(90deg, var(--antique-gold), var(--aged-gold), var(--antique-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== PRODUCTS ===== */
+.products {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  flex-wrap: wrap;
+}
+
+.product {
+  max-width: 280px;
+}
+
+.product img {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+/* ===== PAYPAL ===== */
+.paypal {
+  background: #0b0b0b;
+  border: 1px solid #1c1c1c;
+  padding: 16px;
+}
+
+/* ===== FOOTER ===== */
+.footer a {
+  color: var(--antique-gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  margin: 0 16px;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .products {
+    gap: 70px;
+  }
+
+  .section {
+    padding: 110px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero-section">
+  <h1>S E E N</h1>
+  <p>Presence before words.</p>
+  <div class="status">Available now</div>
+
+  <img
+    src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png"
+    alt="S E E N Eau de Parfum"
+    class="hero-image"
+  />
+</section>
+
+<!-- SCENT -->
+<section class="section">
+  <h2>The Scent</h2>
+  <p>
+    A restrained composition. Warmth and clarity unfold slowly, leaving a quiet
+    trace that feels intimate, measured, and enduring.
+  </p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <h2 class="gold">The Bottle</h2>
+  <p>Reduced. Weighted. Precise.</p>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="S E E N Light">
+      <div class="paypal" id="paypal-light"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "LWDMWH2D6HDE4"
+        }).render("#paypal-light");
+      </script>
+    </div>
+
+    <div class="product">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="S E E N Dark">
+      <div class="paypal" id="paypal-dark"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "FERZ227356RFA"
+        }).render("#paypal-dark");
+      </script>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="section footer">
+  <h2 class="gold">Available Now</h2>
+  <p style="margin-top:32px;">
+    <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> ·
+    <a href="mailto:oceandeu@gmail.com">Email</a> ·
+    <a href="/">seenfragrance.com</a>
+  </p>
+</section>
+
+</body>
+</html>
