@@ -1,0 +1,146 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: radial-gradient(circle at top, #0a0a0a 0%, #000000 60%);
+  color: #eaeaea;
+  letter-spacing: 0.08em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  text-align: center;
+  padding: 160px 24px 0;
+}
+
+.hero-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  letter-spacing: 0.6em;
+  margin-bottom: 18px;
+  color: #f5f5f5;
+}
+
+.hero-section p {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  text-transform: uppercase;
+}
+
+.hero-section .status {
+  margin-top: 16px;
+  font-size: 0.7rem;
+  opacity: 0.45;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 760px;
+  margin: 100px auto 0;
+  display: block;
+  filter: drop-shadow(0 40px 120px rgba(0,0,0,0.8));
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 140px 24px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  margin-bottom: 28px;
+}
+
+.section p {
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.9;
+  font-size: 0.9rem;
+  opacity: 0.78;
+}
+
+/* ===== GOLD SIGNATURE ===== */
+.gold {
+  background: linear-gradient(
+    135deg,
+    #e6d8a3 0%,
+    #bfa46a 35%,
+    #8b6b3d 70%,
+    #f5e6b8 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(191,164,106,0.15);
+}
+
+/* ===== PRODUCTS ===== */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.product {
+  max-width: 280px;
+}
+
+.product img {
+  width: 100%;
+  margin-bottom: 32px;
+  filter: drop-shadow(0 25px 70px rgba(0,0,0,0.7));
+}
+
+/* ===== PAYPAL ===== */
+.paypal {
+  background: linear-gradient(180deg, #0e0e0e, #050505);
+  padding: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(191,164,106,0.15);
+  box-shadow: inset 0 0 40px rgba(191,164,106,0.03);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding-bottom: 160px;
+}
+
+.footer a {
+  color: #c9b27c;
+  margin: 0 14px;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .products {
+    gap: 70px;
+  }
+
+  .section {
+    padding: 100px 20px;
+  }
+
+  .hero-section h1 {
+    letter-spacing: 0.4em;
+  }
+}
+</style>
