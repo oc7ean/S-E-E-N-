@@ -5,161 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>S E E N – Eau de Parfum</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
-    a {
-      color: #f5f5f5;
-    }
-    section {
-      padding: 60px 20px;
-    }
-    .dark {
-      background-color: #121212;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      letter-spacing: 5px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .hero .tagline {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-    .status {
-      display: block;
-      text-align: center;
-      font-weight: 500;
-      letter-spacing: 1px;
-      margin-top: 10px;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-    .section p {
-      max-width: 800px;
-      margin: 0 auto 30px auto;
-      font-size: 1rem;
-      text-align: center;
-    }
-    .product-section {
-      background-color: #121212;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .product-section img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 8px;
-      margin: 0 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .product-section img:hover {
-      transform: scale(1.05);
-    }
-    .product-info {
-      font-size: 1.3rem;
-      margin: 20px 0 30px 0;
-      letter-spacing: 1px;
-      font-weight: 400;
-    }
-    .buy-button {
-      display: inline-block;
-      padding: 14px 40px;
-      background-color: #f5f5f5;
-      color: #0f0f0f;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 1px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-    .buy-button:hover {
-      background-color: #e0e0e0;
-    }
-    .contact-links a {
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: 500;
-    }
-  </style>
 </head>
 <body>
 
-  <section class="hero">
-    <h1>S E E N</h1>
-    <p class="tagline">Presence before words.</p>
-    <span class="status">Available now</span>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <h1>S E E N</h1>
+  <p class="tagline">Presence before words.</p>
+  <span class="status">Available now</span>
+</section>
 
-  <section class="section">
-    <h2>The Scent</h2>
-    <p>
-      S E E N is a study in subtlety. Its layers reveal depth and clarity in equal measure, a fragrance that marks its presence gracefully, leaving a quiet, lasting trace.
-    </p>
-  </section>
+<!-- BODY / BRAND IMAGE -->
+<section class="section dark">
+  <img src="https://i.postimg.cc/50km0nmv/9B3F511E_15D9_49A0_AC45_7D88F83014EA.png"
+       alt="S E E N Body Image"
+       style="width:100%; max-width:500px; display:block; margin:0 auto; border-radius:8px;">
+</section>
 
-  <section class="section dark">
-    <h2>The Bottle</h2>
-    <p>
-      A silhouette of restraint. Weighted, precise, intentional.
-    </p>
-  </section>
+<!-- SCENT -->
+<section class="section">
+  <h2>The Scent</h2>
+  <p>
+    S E E N is a study in subtlety. Its construction reveals itself gradually,
+    unfolding with measured depth and quiet confidence.
+    The composition lingers with intention — present, controlled,
+    and unmistakably restrained.
+  </p>
+</section>
 
-  <!-- Product Section -->
-  <section class="product-section">
-    <h2>S E E N – Eau de Parfum</h2>
-    <p class="product-info">50 ml – 40€</p>
+<!-- BOTTLE -->
+<section class="section dark">
+  <h2>The Bottle</h2>
+  <p>
+    A silhouette of restraint. Weighted, precise, intentional.
+  </p>
+</section>
 
-    <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px;">
-      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" 
-           alt="S E E N Perfume Bottle Dark">
-      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" 
-           alt="S E E N Perfume Bottle Light">
+<!-- PRODUCTS -->
+<section class="section">
+  <h2>Available Bottles</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; margin-top:40px;">
+
+    <!-- DARK BOTTLE -->
+    <div style="max-width:280px; text-align:center;">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg"
+           alt="S E E N Bottle Dark"
+           style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <p style="letter-spacing:1px;">S E E N — Eau de Parfum</p>
+      <p style="opacity:0.8;">50 ml · 40€</p>
+
+      <a href="https://www.paypal.com/paypalme/oceandeu/40"
+         target="_blank"
+         style="
+           display:inline-block;
+           margin-top:15px;
+           padding:10px 28px;
+           border:1px solid #000;
+           text-decoration:none;
+           color:#000;
+           letter-spacing:1px;
+         ">
+        Buy
+      </a>
     </div>
 
-    <p style="margin-top:30px;">
-      <a class="buy-button" href="https://www.paypal.com/paypalme/oceandeu/40" target="_blank">Buy Now</a>
-    </p>
+    <!-- LIGHT BOTTLE -->
+    <div style="max-width:280px; text-align:center;">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg"
+           alt="S E E N Bottle Light"
+           style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <p style="letter-spacing:1px;">S E E N — Eau de Parfum</p>
+      <p style="opacity:0.8;">50 ml · 40€</p>
 
-    <p class="contact-links">
-      <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> ·
-      <a href="mailto:oceandeu@gmail.com">Email</a>
-    </p>
-  </section>
+      <a href="https://www.paypal.com/paypalme/oceandeu/40"
+         target="_blank"
+         style="
+           display:inline-block;
+           margin-top:15px;
+           padding:10px 28px;
+           border:1px solid #000;
+           text-decoration:none;
+           color:#000;
+           letter-spacing:1px;
+         ">
+        Buy
+      </a>
+    </div>
 
-  <section class="section">
-    <h2>About S E E N</h2>
-    <p>
-      S E E N was born from a pursuit of clarity and restraint, a desire to craft a fragrance that reflects presence without performance. Every element was considered with care—the balance of notes, the weight of each accord, the harmony of the whole forming a scent that exists quietly yet unmistakably.
+  </div>
+</section>
 
-      The fragrance reveals itself in layers. Subtle warmth and depth emerge over time, unfolding with a deliberate rhythm that rewards attention. It lingers softly, a presence that evolves naturally, intimate yet persistent, composed without excess.
+<!-- ABOUT -->
+<section class="section dark">
+  <h2>About S E E N</h2>
+  <p>
+    S E E N was created from a pursuit of clarity and restraint.
+    Every decision — from composition to form — was made with intention.
+    The fragrance evolves quietly, revealing depth over time,
+    leaving a presence that is intimate, deliberate, and enduring.
+  </p>
+</section>
 
-      Created with the finest ingredients, each element is chosen for its purity and ability to interact harmoniously with the skin. S E E N is a study in restraint and refinement, a fragrance that is simultaneously personal and enduring—a quiet signature, carefully measured and artfully realized.
-    </p>
-  </section>
-
-  <section class="section dark">
-    <h2>Available Now</h2>
-    <p class="contact-links">
-      Shop & inquiries:<br>
-      <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> · 
-      <a href="mailto:oceanmeb@gmail.com">Email</a> · 
-      <a href="https://oc7ean.github.io/seen/" target="_blank">seenfragrance.com</a>
-    </p>
-  </section>
+<!-- CONTACT -->
+<section class="section">
+  <p style="text-align:center;">
+    Shop & inquiries:<br><br>
+    <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> ·
+    <a href="mailto:oceandeu@gmail.com">Email</a>
+  </p>
+</section>
 
 </body>
 </html>
