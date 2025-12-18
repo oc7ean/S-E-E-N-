@@ -1,0 +1,112 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+}
+.intro h1 {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  font-weight: 400;
+  color: #eaeaea;
+  margin-bottom: 10px;
+}
+.intro .tagline {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  color: #bfbfbf;
+}
+.intro .status {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #eaeaea;
+}
+
+/* Hero */
+.hero img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ffd700; /* subtle gold accent */
+}
+.section p {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  margin-bottom: 20px;
+}
+
+/* Scent section light background */
+.scent {
+  background-color: #1c1c1c;
+  padding: 60px 20px;
+}
+
+/* Bottle images */
+.bottle-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.bottle-images img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.bottle-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Products */
+.shop .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.shop .product img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.product-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
+
+/* Contact links */
+.contact a {
+  color: #ffd700;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
