@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S E E N – Eau de Parfum</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    h1, h2 {
+      margin: 0 0 15px 0;
+      letter-spacing: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #ffffff;
+    }
+
+    .hero .tagline {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .hero .status {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .hero img {
+      margin-top: 40px;
+      max-width: 80%;
+      border-radius: 8px;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #d4af37; /* subtle gold */
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    /* Bottle Section */
+    .bottle-images {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .bottle-images img {
+      width: auto;
+      max-width: 300px;
+      border-radius: 8px;
+    }
+
+    /* Shop Section */
+    .shop-item {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .shop-item img {
+      max-width: 300px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .shop-item label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .shop-item select {
+      padding: 8px 12px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #555;
+      font-family: Georgia, serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    .shop-item .buy-button {
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #bfa54a, #7f6b32);
+      border: none;
+      color: #0a0a0a;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .shop-item .buy-button:hover {
+      background: linear-gradient(45deg, #d4af37, #a07f3a);
+    }
+
+    /* About Section */
+    .about {
+      padding-bottom: 60px;
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .contact a {
+      margin: 0 10px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .shop-item img, .bottle-images img, .hero img {
+        max-width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Introduction -->
+  <section class="hero">
+    <h1>S E E N</h1>
+    <p class="tagline">Presence before words.</p>
+    <span class="status">Available now</span>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="hero">
+    <img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png" alt="S E E N Hero Image">
+  </section>
+
+  <!-- The Scent -->
+  <section class="section">
+    <h2>The Scent</h2>
+    <p>
+      S E E N is a study in subtlety. Its layers reveal depth and clarity in equal measure, a fragrance that marks its presence gracefully, leaving a quiet, lasting trace.
+    </p>
+  </section>
+
+  <!-- The Bottle -->
+  <section class="section">
+    <h2>The Bottle</h2>
+    <p>A silhouette of restraint. Weighted, precise, intentional.</p>
+    <div class="bottle-images">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="S E E N Dark Bottle">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="S E E N Light Bottle">
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="section">
+    <h2>Shop S E E N</h2>
+
+    <!-- Dark Bottle -->
+    <div class="shop-item">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="S E E N Dark Bottle">
+      <label for="quantity-dark">Quantity:</label>
+      <select id="quantity-dark">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="oceandeu@gmail.com">
+        <input type="hidden" name="item_name" value="S E E N Dark Eau de Parfum">
+        <input type="hidden" name="amount" value="40.00">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="submit" value="Buy Now" class="buy-button">
+      </form>
+    </div>
+
+    <!-- Light Bottle -->
+    <div class="shop-item">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="S E E N Light Bottle">
+      <label for="quantity-light">Quantity:</label>
+      <select id="quantity-light">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="oceandeu@gmail.com">
+        <input type="hidden" name="item_name" value="S E E N Light Eau de Parfum">
+        <input type="hidden" name="amount" value="40.00">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="submit" value="Buy Now" class="buy-button">
+      </form>
+    </div>
+
+  </section>
+
+  <!-- About S E E N -->
+  <section class="section about">
+    <h2>About S E E N</h2>
+    <p>
+      S E E N was born from a pursuit of clarity and restraint, a desire to craft a fragrance that reflects presence without performance. Every element was considered with care: the balance of notes, the weight of each accord, the harmony of the whole forming a scent that exists quietly yet unmistakably.
+    </p>
+    <p>
+      The fragrance reveals itself in layers. Subtle warmth and depth emerge over time, unfolding with a deliberate rhythm that rewards attention. It lingers softly, a presence that evolves naturally, intimate yet persistent, composed without excess.
+    </p>
+    <p>
+      Created with the finest ingredients, each element is chosen for its purity and ability to interact harmoniously with the skin. S E E N is a study in restraint and refinement, a fragrance that is simultaneously personal and enduring—a quiet signature, carefully measured and artfully realized.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact">
+    <h2>Contact & Inquiries</h2>
+    <p>
+      <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> · 
+      <a href="mailto:oceandeu@gmail.com">Email</a> · 
+      <a href="https://oc7ean.github.io/seen/" target="_blank">seenfragrance.com</a>
+    </p>
+  </section>
+
+</body>
+</html>
