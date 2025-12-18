@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b0b0b;
+  color: #eaeaea;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.tagline {
+  margin-top: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: #cfcfcf;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: #a0a0a0;
+}
+
+/* HERO */
+.hero img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 120px;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #d6c9a5; /* muted gold */
+}
+
+.section p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* SCENT (LIGHT SECTION) */
+.scent {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+.scent h2 {
+  color: #111;
+}
+
+.scent p {
+  color: #111;
+}
+
+/* BOTTLE */
+.bottle-images {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.bottle-images img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* SHOP */
+.shop {
+  text-align: center;
+}
+
+.product {
+  margin-bottom: 120px;
+}
+
+.product img {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+}
+
+.product-title {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+}
+
+.product-meta {
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  color: #bdbdbd;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.contact a {
+  color: #d6c9a5;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.contact span {
+  margin: 0 10px;
+  color: #666;
+}
