@@ -1,0 +1,160 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+/* Intro/Header */
+.intro {
+  text-align: center;
+  padding: 100px 20px 50px;
+}
+
+.intro h1 {
+  font-size: 60px;
+  letter-spacing: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #b5b5b5;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sections */
+.section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Section Titles */
+.section h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 36px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.section p {
+  font-size: 18px;
+  color: #cfcfcf;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Bottle Images */
+.bottle-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.bottle-images img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.bottle-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Shop Section */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.product {
+  max-width: 250px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
+
+/* Contact */
+.contact a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  .bottle-images {
+    gap: 20px;
+  }
+
+  .products {
+    gap: 30px;
+  }
+}
