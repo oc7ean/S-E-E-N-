@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S E E N — Eau de Parfum</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PayPal SDK (ONLY ONCE PER PAGE) -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAym35qgEbxv2hSlqNUaP0IzxS2jx0jL-COBfpqCGbFyWteZkRHUp23KQ1S4yxINLbNtLTkhGWYrBrO_o&components=hosted-buttons&currency=EUR">
+  </script>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section class="intro">
+  <h1>S E E N</h1>
+  <p class="tagline">Presence before words.</p>
+  <span class="status">Available now</span>
+</section>
+
+<!-- HERO IMAGE (SECOND, AS YOU ASKED) -->
+<section class="hero">
+  <img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png" alt="S E E N Hero Image">
+</section>
+
+<!-- THE SCENT (LIGHT SECTION) -->
+<section class="section light">
+  <h2>The Scent</h2>
+  <p>
+    S E E N is a study in subtlety. Its layers reveal depth and clarity in equal measure, 
+    a fragrance that marks its presence gracefully, leaving a quiet, lasting trace.
+  </p>
+</section>
+
+<!-- THE BOTTLE -->
+<section class="section dark">
+  <h2>The Bottle</h2>
+  <p>
+    A silhouette of restraint. Weighted, precise, intentional.
+  </p>
+</section>
+
+<!-- BODY IMAGE (EDITORIAL / PRESENCE) -->
+<section class="editorial">
+  <img src="https://i.postimg.cc/50km0nmv/9B3F511E_15D9_49A0_AC45_7D88F83014EA.png" alt="S E E N Presence">
+</section>
+
+<!-- ABOUT S E E N -->
+<section class="section dark">
+  <h2>About S E E N</h2>
+  <p>
+    S E E N was born from a pursuit of clarity and restraint, a desire to craft a fragrance that reflects presence without performance.
+    Every element was considered with care — the balance of notes, the weight of each accord, the harmony of the whole — forming a scent
+    that exists quietly yet unmistakably.
+    <br><br>
+    The fragrance reveals itself in layers. Subtle warmth and depth emerge over time, unfolding with a deliberate rhythm that rewards attention.
+    It lingers softly, a presence that evolves naturally, intimate yet persistent, composed without excess.
+    <br><br>
+    Created with the finest ingredients, each element is chosen for its purity and ability to interact harmoniously with the skin.
+    S E E N is a study in restraint and refinement — a quiet signature, carefully measured and artfully realized.
+  </p>
+</section>
+
+<!-- SHOP -->
+<section class="shop">
+  <h2>Shop S E E N</h2>
+
+  <div class="product-grid">
+
+    <!-- LIGHT -->
+    <div class="product">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="S E E N Light">
+      <h3>S E E N — Light</h3>
+      <span>50 ml · 40 €</span>
+      <div id="paypal-container-FERZ227356RFA"></div>
+    </div>
+
+    <!-- DARK -->
+    <div class="product">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="S E E N Dark">
+      <h3>S E E N — Dark</h3>
+      <span>50 ml · 40 €</span>
+      <div id="paypal-container-LWDMWH2D6HDE4"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAYPAL BUTTON RENDER -->
+<script>
+  paypal.HostedButtons({ hostedButtonId: "FERZ227356RFA" })
+    .render("#paypal-container-FERZ227356RFA");
+
+  paypal.HostedButtons({ hostedButtonId: "LWDMWH2D6HDE4" })
+    .render("#paypal-container-LWDMWH2D6HDE4");
+</script>
+
+<!-- CONTACT -->
+<footer>
+  <p>
+    <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> ·
+    <a href="mailto:oceandeu@gmail.com">Email</a>
+  </p>
+</footer>
+
+</body>
+</html>
