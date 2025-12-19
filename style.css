@@ -158,3 +158,24 @@ body {
     gap: 30px;
   }
 }
+/* Hero Video – Luxury Style */
+.video-section {
+  background: #000;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 9 / 16; /* vertical, Shorts-style */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* disables clicking */
+}
