@@ -10,19 +10,18 @@ body { font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background:#1
 
 /* Hero Section */
 .hero {
-  height: 70vh;
-  overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  background:#111;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), #111;
 }
 .hero img {
-  height: auto;
-  max-height: 100%;
+  max-height: 80%;
+  width: auto;
   object-fit: contain;
-  animation: heroZoom 20s ease-in-out infinite alternate;
+  animation: heroZoom 25s ease-in-out infinite alternate;
 }
 @keyframes heroZoom {
   0% { transform: scale(1); }
@@ -43,7 +42,7 @@ body { font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background:#1
 }
 .product img:hover, .bottle-images img:hover {
   transform: scale(1.08) translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 .product p { margin-top:10px; font-size:1em; font-weight:500; color:#ccc; }
 
@@ -56,13 +55,23 @@ body { font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background:#1
 .ribbon-track {
   display:flex;
   gap:40px;
-  animation: slideRibbon 60s linear infinite;
+  animation: slideRibbon 80s linear infinite;
   align-items:center;
 }
-.ribbon-track img { height:60px; border-radius:8px; transition: transform 0.3s; }
+.ribbon-track img {
+  height:60px;
+  border-radius:8px;
+  transition: transform 0.3s;
+  animation: floatRibbon 4s ease-in-out infinite;
+}
 .ribbon-track img:hover { transform: scale(1.1); }
 @keyframes slideRibbon {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+@keyframes floatRibbon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
 }
 .ribbon-track:hover { animation-play-state: paused; }
