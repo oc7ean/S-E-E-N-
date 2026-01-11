@@ -17,7 +17,7 @@
     <span class="status">Available now</span>
   </header>
 
-  <!-- Hero Section with subtle zoom -->
+  <!-- Hero Section -->
   <section class="hero">
     <img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png" alt="S E E N Hero Image">
   </section>
@@ -47,18 +47,15 @@
     </p>
   </section>
 
-  <!-- Shop Section with animated bottles -->
-  <section class="section shop" id="shop">
+  <!-- Shop -->
+  <section class="section shop">
     <h2>Shop</h2>
     <div class="products">
-      <!-- Dark Bottle -->
       <div class="product">
         <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Dark Bottle">
         <p>50 ml – 40 €</p>
         <div id="paypal-container-dark"></div>
       </div>
-
-      <!-- Light Bottle -->
       <div class="product">
         <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="Light Bottle">
         <p>50 ml – 40 €</p>
@@ -76,20 +73,21 @@
     </p>
   </section>
 
+  <!-- Luxury Product Ribbon -->
+  <section class="luxury-ribbon">
+    <div class="ribbon-track">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Dark Bottle">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="Light Bottle">
+      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Dark Bottle">
+      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="Light Bottle">
+    </div>
+  </section>
+
   <!-- PayPal Buttons -->
   <script>
     paypal.HostedButtons({ hostedButtonId: "FERZ227356RFA" }).render("#paypal-container-dark");
     paypal.HostedButtons({ hostedButtonId: "LWDMWH2D6HDE4" }).render("#paypal-container-light");
   </script>
-<!-- Floating Product Ribbon -->
-<section class="product-ribbon">
-  <div class="ribbon-track">
-    <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Dark Bottle">
-    <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="Light Bottle">
-    <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Dark Bottle">
-    <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="Light Bottle">
-    <!-- Repeat images to make loop seamless -->
-  </div>
-</section>
+
 </body>
 </html>
