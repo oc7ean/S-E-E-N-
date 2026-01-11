@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S E E N – Eau de Parfum</title>
   <link rel="stylesheet" href="style.css">
-
   <!-- PayPal SDK -->
   <script src="https://www.paypal.com/sdk/js?client-id=BAAym35qgEbxv2hSlqNUaP0IzxS2jx0jL-COBfpqCGbFyWteZkRHUp23KQ1S4yxINLbNtLTkhGWYrBrO_o&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 </head>
@@ -18,18 +17,13 @@
     <span class="status">Available now</span>
   </header>
 
-  <!-- Hero Slideshow -->
+  <!-- Hero Section with subtle zoom -->
   <section class="hero">
-    <div class="slideshow">
-      <img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png" class="active" alt="Hero Image 1">
-      <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Hero Image 2">
-      <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg" alt="Hero Image 3">
-    </div>
-    <button class="shop-now-btn" onclick="document.querySelector('#shop').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+    <img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png" alt="S E E N Hero Image">
   </section>
 
   <!-- The Scent -->
-  <section class="section scent fade-in">
+  <section class="section scent">
     <h2>The Scent</h2>
     <p>
       S E E N is a study in subtlety. Its layers reveal depth and clarity in equal measure, a fragrance that marks its presence gracefully, leaving a quiet, lasting trace.
@@ -37,7 +31,7 @@
   </section>
 
   <!-- The Bottle -->
-  <section class="section bottle fade-in">
+  <section class="section bottle">
     <h2>The Bottle</h2>
     <div class="bottle-images">
       <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg" alt="Dark Bottle">
@@ -46,17 +40,16 @@
   </section>
 
   <!-- About -->
-  <section class="section about fade-in">
+  <section class="section about">
     <h2>About S E E N</h2>
     <p>
       For K. Aymen Mebarki, the founder, the fragrance was conceived within a discipline of restraint and enduring refinement. S E E N is presence without excess governed by discretion, shaped by intent. Every element was composed with precision: the equilibrium of notes, the measured gravity of each accord, the coherence of the whole. The result is a scent that exists quietly, with authority.
     </p>
   </section>
 
-  <!-- Shop -->
-  <section id="shop" class="section shop fade-in">
+  <!-- Shop Section with animated bottles -->
+  <section class="section shop" id="shop">
     <h2>Shop</h2>
-
     <div class="products">
       <!-- Dark Bottle -->
       <div class="product">
@@ -75,7 +68,7 @@
   </section>
 
   <!-- Contact -->
-  <section class="section contact fade-in">
+  <section class="section contact">
     <h2>Contact & Inquiries</h2>
     <p>
       <a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a> · 
@@ -87,32 +80,6 @@
   <script>
     paypal.HostedButtons({ hostedButtonId: "FERZ227356RFA" }).render("#paypal-container-dark");
     paypal.HostedButtons({ hostedButtonId: "LWDMWH2D6HDE4" }).render("#paypal-container-light");
-  </script>
-
-  <!-- Hero Slideshow Script -->
-  <script>
-    let slides = document.querySelectorAll('.slideshow img');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 4000);
-  </script>
-
-  <!-- Scroll Fade-In -->
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const options = { threshold: 0.2 };
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-    faders.forEach(fader => observer.observe(fader));
   </script>
 
 </body>
