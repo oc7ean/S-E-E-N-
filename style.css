@@ -1,4 +1,4 @@
-/* Reset & Body */
+/* Reset */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background:#fefefe; color:#111; line-height:1.6; }
 
@@ -17,14 +17,12 @@ body { font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background:#f
   align-items:center;
   position:relative;
 }
-
 .hero img {
   width:100%;
   height:100%;
   object-fit:cover;
   animation: heroZoom 20s ease-in-out infinite alternate;
 }
-
 @keyframes heroZoom {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
@@ -35,72 +33,30 @@ body { font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background:#f
 .section { padding:80px 20px; max-width:1100px; margin:0 auto; text-align:center; }
 .section h2 { font-size:2.2em; margin-bottom:30px; }
 
-/* Bottle Images */
+/* Bottle & Shop Products */
 .bottle-images, .products { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
 .product img, .bottle-images img {
   max-width:300px;
   border-radius:15px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  animation: float 6s ease-in-out infinite;
 }
-
-/* Floating animation for bottles */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
 .product img:hover, .bottle-images img:hover {
   transform: scale(1.08) rotate(1deg);
   box-shadow: 0 15px 30px rgba(0,0,0,0.25);
 }
-
-/* Product Text */
 .product p { margin-top:10px; font-size:1em; font-weight:500; }
 
-/* Custom Button (Shop Now) */
-.shop-now-btn {
-  position:absolute;
-  bottom:20px;
-  padding:12px 30px;
-  background:#111;
-  color:#fff;
-  border:none;
-  border-radius:25px;
-  cursor:pointer;
-  font-size:1em;
-  transition: background 0.3s;
-}
-.shop-now-btn:hover { background:#333; }
-/* Product Ribbon / Infinite Sliding Row */
-.product-ribbon {
-  overflow: hidden;
-  background: #f9f9f9; /* subtle light background */
-  padding: 20px 0;
-}
+/* Contact */
+.contact a { color:#111; text-decoration:none; font-weight:500; margin:0 10px; transition: color 0.3s; }
+.contact a:hover { color:#555; }
 
-.ribbon-track {
-  display: flex;
-  gap: 30px;
-  animation: slideRibbon 20s linear infinite;
-}
-
-.ribbon-track img {
-  height: 100px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.ribbon-track img:hover {
-  transform: scale(1.1);
-}
-
-/* Infinite sliding animation */
+/* Luxury Ribbon at Bottom */
+.luxury-ribbon { overflow:hidden; padding:20px 0; background:#fefefe; }
+.ribbon-track { display:flex; gap:40px; animation: slideRibbon 30s linear infinite; }
+.ribbon-track img { height:80px; border-radius:8px; transition: transform 0.3s; }
+.ribbon-track img:hover { transform: scale(1.1); }
 @keyframes slideRibbon {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-/* Contact Links */
-.contact a { color:#111; text-decoration:none; font-weight:500; margin:0 10px; transition: color 0.3s; }
-.contact a:hover { color:#555; }
+.ribbon-track:hover { animation-play-state: paused; }
