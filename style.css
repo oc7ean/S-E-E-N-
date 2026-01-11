@@ -1,167 +1,145 @@
-/* Reset & Base */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  background-color: #000;
-  color: #eaeaea;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #fefefe;
+  color: #111;
   line-height: 1.6;
 }
 
-/* Intro/Header */
+/* Header */
 .intro {
   text-align: center;
-  padding: 100px 20px 50px;
+  padding: 80px 20px 40px 20px;
 }
 
 .intro h1 {
-  font-size: 60px;
-  letter-spacing: 15px;
-  font-weight: 300;
-  color: #ffffff;
+  font-size: 3em;
+  letter-spacing: 0.2em;
 }
 
-.tagline {
+.intro .tagline {
+  font-size: 1.3em;
   margin-top: 10px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #b5b5b5;
+  opacity: 0.8;
 }
 
-.status {
+.intro .status {
   display: inline-block;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  margin-top: 15px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9em;
+  opacity: 0.9;
 }
 
-/* Hero Image */
-.hero img {
+/* Hero Slideshow */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow img {
+  position: absolute;
   width: 100%;
-  max-height: 600px;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+/* Shop Now Button */
+.shop-now-btn {
+  position: absolute;
+  bottom: 20px;
+  padding: 12px 30px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.shop-now-btn:hover {
+  background: #333;
 }
 
 /* Sections */
 .section {
+  padding: 80px 20px;
   max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
+  margin: 0 auto;
   text-align: center;
 }
 
-/* Section Titles */
 .section h2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-size: 36px;
-  letter-spacing: 5px;
+  font-size: 2.2em;
   margin-bottom: 30px;
-  color: #ffffff;
 }
 
-.section p {
-  font-size: 18px;
-  color: #cfcfcf;
-  max-width: 800px;
-  margin: 0 auto 20px;
-}
-
-/* Bottle Images */
-.bottle-images {
+/* Bottles & Products */
+.bottle-images, .products {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
-.bottle-images img {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.3s;
+.product img, .bottle-images img {
+  max-width: 300px;
+  border-radius: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
-.bottle-images img:hover {
+.product img:hover, .bottle-images img:hover {
   transform: scale(1.05);
-}
-
-/* Shop Section */
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.product {
-  max-width: 250px;
-  text-align: center;
-}
-
-.product img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  transition: transform 0.3s;
-}
-
-.product img:hover {
-  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .product p {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #eaeaea;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 500;
 }
 
-/* Contact */
+/* Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Links */
 .contact a {
+  color: #111;
   text-decoration: none;
-  color: #ffffff;
+  font-weight: 500;
   margin: 0 10px;
-  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .contact a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .intro h1 {
-    font-size: 40px;
-    letter-spacing: 10px;
-  }
-
-  .section h2 {
-    font-size: 28px;
-    letter-spacing: 3px;
-  }
-
-  .bottle-images {
-    gap: 20px;
-  }
-
-  .products {
-    gap: 30px;
-  }
-}
-/* Hero Video – Luxury Style */
-.video-section {
-  background: #000;
-  padding: 120px 0;
-  display: flex;
-  justify-content: center;
+  color: #555;
 }
