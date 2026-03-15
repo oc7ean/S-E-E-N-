@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,96 +15,137 @@
 <style>
 
 body{
-font-family:Inter;
+font-family:Inter,sans-serif;
 margin:0;
-background:#ffffff;
 color:#111;
+background:#fff;
 }
 
-.header{
+header{
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
+}
+
+header h1{
+letter-spacing:6px;
+font-weight:500;
 }
 
 .hero img{
-width:100%;
-max-width:600px;
 display:block;
 margin:auto;
+max-width:520px;
+width:90%;
 }
 
 .section{
 max-width:900px;
 margin:auto;
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 .products{
 display:flex;
-gap:40px;
 justify-content:center;
+gap:60px;
 flex-wrap:wrap;
 }
 
 .product{
-width:250px;
+width:240px;
 }
 
 .product img{
 width:100%;
 }
 
-button{
-background:black;
-color:white;
-border:none;
-padding:12px 18px;
-margin-top:10px;
+.product button{
+margin-top:12px;
+padding:10px 16px;
+border:1px solid black;
+background:white;
 cursor:pointer;
 }
 
-.cart{
-position:fixed;
-right:20px;
-top:20px;
-background:white;
-border:1px solid #ddd;
-padding:20px;
-width:260px;
+.product button:hover{
+background:black;
+color:white;
 }
 
-.cart h3{
-margin-top:0;
+.cart-icon{
+position:fixed;
+top:25px;
+right:25px;
+font-size:18px;
+cursor:pointer;
+}
+
+.cart-panel{
+
+position:fixed;
+right:-420px;
+top:0;
+
+width:360px;
+height:100%;
+
+background:white;
+
+box-shadow:-4px 0 15px rgba(0,0,0,0.1);
+
+padding:30px;
+
+transition:.35s;
+
+overflow:auto;
+}
+
+.cart-panel.open{
+right:0;
 }
 
 .cart-item{
 display:flex;
 justify-content:space-between;
-margin:10px 0;
+margin:15px 0;
+}
+
+.total{
+margin-top:20px;
+font-weight:500;
 }
 
 .checkout{
-margin-top:20px;
+margin-top:30px;
 }
 
 footer{
 text-align:center;
-padding:40px;
+padding:60px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header class="header">
+<div class="cart-icon" onclick="toggleCart()">
+🛒 Cart
+</div>
+
+<header>
+
 <h1>SEEN</h1>
 <p>Presence before words.</p>
+
 </header>
 
 <section class="hero">
+
 <img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png">
+
 </section>
 
 <section class="section">
@@ -111,13 +153,13 @@ padding:40px;
 <h2>The Scent</h2>
 
 <p>
-A composition built on restraint and balance.
+A composition built on restraint and balance.  
 SEEN unfolds quietly, leaving a subtle yet lasting presence.
 </p>
 
 </section>
 
-<section class="section shop">
+<section class="section">
 
 <h2>Shop</h2>
 
@@ -127,8 +169,8 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg">
 
-<p>SEEN Dark — 50ml</p>
-<p>30€</p>
+<p>SEEN — Dark</p>
+<p>50ml — 30€</p>
 
 <button onclick="addToCart('SEEN Dark',30)">Add to Cart</button>
 
@@ -138,8 +180,8 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg">
 
-<p>SEEN Light — 50ml</p>
-<p>30€</p>
+<p>SEEN — Light</p>
+<p>50ml — 30€</p>
 
 <button onclick="addToCart('SEEN Light',30)">Add to Cart</button>
 
@@ -149,13 +191,15 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 </section>
 
-<div class="cart">
+<div class="cart-panel" id="cart">
 
-<h3>Cart</h3>
+<h2>Cart</h2>
 
 <div id="cart-items"></div>
 
-<p>Total: €<span id="total">0</span></p>
+<p class="total">
+Total: €<span id="total">0</span>
+</p>
 
 <div id="paypal-button-container" class="checkout"></div>
 
@@ -163,26 +207,28 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <footer>
 
-<a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a>
-
+<a href="https://www.instagram.com/seenfragrance/">Instagram</a>
 <br><br>
-
 <a href="mailto:oceandeu@gmail.com">Email</a>
 
 </footer>
 
 <script>
 
-let cart = [];
+let cart=[];
 
-function addToCart(name, price){
+function toggleCart(){
+document.getElementById("cart").classList.toggle("open");
+}
 
-let item = cart.find(i => i.name === name);
+function addToCart(name,price){
+
+let item=cart.find(i=>i.name===name);
 
 if(item){
-item.qty += 1;
+item.qty++;
 }else{
-cart.push({name, price, qty:1});
+cart.push({name,price,qty:1});
 }
 
 renderCart();
@@ -191,26 +237,26 @@ renderCart();
 
 function renderCart(){
 
-let container = document.getElementById("cart-items");
-container.innerHTML = "";
+let container=document.getElementById("cart-items");
+container.innerHTML="";
 
-let total = 0;
+let total=0;
 
 cart.forEach(item=>{
 
-let div = document.createElement("div");
+let div=document.createElement("div");
 
 div.className="cart-item";
 
-div.innerHTML = `${item.name} x${item.qty} <span>€${item.price*item.qty}</span>`;
+div.innerHTML=`${item.name} x${item.qty} <span>€${item.qty*item.price}</span>`;
 
 container.appendChild(div);
 
-total += item.price * item.qty;
+total+=item.price*item.qty;
 
 });
 
-document.getElementById("total").innerText = total;
+document.getElementById("total").innerText=total;
 
 }
 
@@ -218,7 +264,7 @@ paypal.Buttons({
 
 createOrder:function(data,actions){
 
-let total = cart.reduce((sum,item)=>sum+(item.price*item.qty),0);
+let total=cart.reduce((sum,i)=>sum+i.price*i.qty,0);
 
 return actions.order.create({
 
@@ -238,9 +284,10 @@ onApprove:function(data,actions){
 
 return actions.order.capture().then(function(details){
 
-alert("Payment completed by " + details.payer.name.given_name);
+alert("Payment successful");
 
 cart=[];
+
 renderCart();
 
 });
@@ -252,5 +299,4 @@ renderCart();
 </script>
 
 </body>
-
 </html>
