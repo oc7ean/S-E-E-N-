@@ -17,8 +17,8 @@
 body{
 font-family:Inter,sans-serif;
 margin:0;
-color:#111;
 background:#fff;
+color:#111;
 }
 
 header{
@@ -32,10 +32,10 @@ font-weight:500;
 }
 
 .hero img{
+max-width:550px;
+width:90%;
 display:block;
 margin:auto;
-max-width:520px;
-width:90%;
 }
 
 .section{
@@ -45,10 +45,21 @@ padding:80px 20px;
 text-align:center;
 }
 
+.bottles{
+display:flex;
+gap:40px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.bottles img{
+width:260px;
+}
+
 .products{
 display:flex;
-justify-content:center;
 gap:60px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
@@ -60,7 +71,7 @@ width:240px;
 width:100%;
 }
 
-.product button{
+button{
 margin-top:12px;
 padding:10px 16px;
 border:1px solid black;
@@ -68,7 +79,7 @@ background:white;
 cursor:pointer;
 }
 
-.product button:hover{
+button:hover{
 background:black;
 color:white;
 }
@@ -77,27 +88,20 @@ color:white;
 position:fixed;
 top:25px;
 right:25px;
-font-size:18px;
 cursor:pointer;
+font-size:18px;
 }
 
 .cart-panel{
-
 position:fixed;
-right:-420px;
 top:0;
-
-width:360px;
+right:-380px;
+width:340px;
 height:100%;
-
 background:white;
-
-box-shadow:-4px 0 15px rgba(0,0,0,0.1);
-
+box-shadow:-4px 0 20px rgba(0,0,0,0.1);
 padding:30px;
-
 transition:.35s;
-
 overflow:auto;
 }
 
@@ -108,7 +112,7 @@ right:0;
 .cart-item{
 display:flex;
 justify-content:space-between;
-margin:15px 0;
+margin:12px 0;
 }
 
 .total{
@@ -123,6 +127,13 @@ margin-top:30px;
 footer{
 text-align:center;
 padding:60px;
+}
+
+footer a{
+display:block;
+margin:10px;
+text-decoration:none;
+color:#111;
 }
 
 </style>
@@ -144,7 +155,7 @@ padding:60px;
 
 <section class="hero">
 
-<img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png">
+<img src="https://i.postimg.cc/Y0XZLHdK/IMG-7992.png" alt="Seen perfume">
 
 </section>
 
@@ -161,6 +172,31 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <section class="section">
 
+<h2>The Bottle</h2>
+
+<div class="bottles">
+
+<img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg">
+
+<img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>About</h2>
+
+<p>
+Created by K. Aymen Mebarki.  
+A fragrance shaped through discipline and refinement.
+</p>
+
+</section>
+
+<section class="section">
+
 <h2>Shop</h2>
 
 <div class="products">
@@ -169,8 +205,8 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <img src="https://i.postimg.cc/0QNfPL7j/2BDB92CF_6AA1_4ED5_A9FC_45E56E423F5B.jpg">
 
-<p>SEEN — Dark</p>
-<p>50ml — 30€</p>
+<p>SEEN Dark — 50ml</p>
+<p>30€</p>
 
 <button onclick="addToCart('SEEN Dark',30)">Add to Cart</button>
 
@@ -180,8 +216,8 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <img src="https://i.postimg.cc/k45cqkWC/9B3F511E_15D9_49A0_AC45_7D88F83014EA.jpg">
 
-<p>SEEN — Light</p>
-<p>50ml — 30€</p>
+<p>SEEN Light — 50ml</p>
+<p>30€</p>
 
 <button onclick="addToCart('SEEN Light',30)">Add to Cart</button>
 
@@ -193,7 +229,7 @@ SEEN unfolds quietly, leaving a subtle yet lasting presence.
 
 <div class="cart-panel" id="cart">
 
-<h2>Cart</h2>
+<h2>Your Cart</h2>
 
 <div id="cart-items"></div>
 
@@ -207,8 +243,8 @@ Total: €<span id="total">0</span>
 
 <footer>
 
-<a href="https://www.instagram.com/seenfragrance/">Instagram</a>
-<br><br>
+<a href="https://www.instagram.com/seenfragrance/" target="_blank">Instagram</a>
+
 <a href="mailto:oceandeu@gmail.com">Email</a>
 
 </footer>
@@ -282,7 +318,7 @@ value: total.toFixed(2)
 
 onApprove:function(data,actions){
 
-return actions.order.capture().then(function(details){
+return actions.order.capture().then(function(){
 
 alert("Payment successful");
 
@@ -299,4 +335,5 @@ renderCart();
 </script>
 
 </body>
+
 </html>
